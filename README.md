@@ -5,12 +5,9 @@
 - **Tugas :** Activity 7 - Room Database (0118_RoomDatabase)
 
 ## Preview Tampilan
-<!-- Gambar 1: Tampilan UI murni hasil running aplikasi -->
-<p align="center">
-  <img src="preview_running.png" alt="Preview Running Aplikasi" width="350"/>
-</p>
+<img width="1080" height="2160" alt="image" src="https://github.com/user-attachments/assets/c4769b95-0c27-4988-bec5-114739d4dbde" />
 
-<!-- Gambar 2: Tampilan UI berdampingan dengan kodingan di Android Studio -->
-<p align="center">
-  <img src="preview_studio.png" alt="Preview Android Studio" width="700"/>
-</p>
+<img width="1080" height="2160" alt="image" src="https://github.com/user-attachments/assets/5500eaf1-a430-4473-934b-32b9f8cf8872" />
+
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/752753a4-403d-4a1c-9f68-beb9f7093933" />
+
