@@ -7,6 +7,33 @@ import androidx.lifecycle.ViewModel
 import com.example.questroomdatabase_0118.repositori.RepositoriSiswa
 import com.example.questroomdatabase_0118.room.Siswa
 
+class EntryViewModel(private val repositoriSiswa: RepositoriSiswa) : ViewModel() {
+    /**
+     * Berisi status Siswa saat ini
+     */
+    var uiStateSiswa by mutableStateOf(UIStateSiswa())
+        private set
+
+    /* Fungsi untuk memvalidasi input */
+    private fun validasiInput(uiState: DetailSiswa = uiStateSiswa.detailSiswa): Boolean {
+        return with(uiState) {
+            nama.isNotBlank() && alamat.isNotBlank() && telpon.isNotBlank()
+        }
+    }
+
+    fun updateUiState(detailSiswa: DetailSiswa) {
+        uiStateSiswa =
+            UIStateSiswa(detailSiswa = detailSiswa, isEntryValid = validasiInput(detailSiswa))
+    }
+
+    /* Fungsi untuk menyimpan data yang di-entry */
+    suspend fun saveSiswa() {
+        if (validasiInput()) {
+            repositoriSiswa.insertSiswa(uiStateSiswa.detailSiswa.toSiswa())
+        }
+    }
+}
+
 /**
  * Mewakili Status UI untuk Siswa.
  */
@@ -22,6 +49,7 @@ data class DetailSiswa(
     val telpon: String = ""
 )
 
+/* Fungsi untuk mengkonversi data input ke data dalam tabel sesuai jenis datanya */
 fun DetailSiswa.toSiswa(): Siswa = Siswa(
     id = id,
     nama = nama,
