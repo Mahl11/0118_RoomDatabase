@@ -10,6 +10,8 @@
     <string name="telpon1">Telpon Siswa :</string>
     <string name="required_field">* required fields</string>
     <string name="btn_submit">Submit</string>
+
+    <!-- Resource string untuk halaman detail dan edit siswa -->
     <string name="detail_siswa">Detail Siswa</string>
     <string name="edit_siswa">Edit Siswa</string>
     <string name="back">Back</string>
