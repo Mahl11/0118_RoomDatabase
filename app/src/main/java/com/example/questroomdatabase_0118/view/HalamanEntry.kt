@@ -22,8 +22,10 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.questroomdatabase_0118.R
+import com.example.questroomdatabase_0118.ui.theme.QuestRoomDatabase_0118Theme
 import com.example.questroomdatabase_0118.uicontroller.DestinasiEntry
 import com.example.questroomdatabase_0118.uicontroller.SiswaTopAppBar
 import com.example.questroomdatabase_0118.viewmodel.DetailSiswa
@@ -143,6 +145,20 @@ fun FormInputSiswa(
         HorizontalDivider(
             thickness = dimensionResource(R.dimen.padding_small),
             modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium))
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun FormInputSiswaPreview() {
+    QuestRoomDatabase_0118Theme {
+        FormInputSiswa(
+            detailSiswa = DetailSiswa(
+                nama = "Ilham Saputra",
+                alamat = "Yogyakarta",
+                telpon = "081234567890"
+            )
         )
     }
 }
